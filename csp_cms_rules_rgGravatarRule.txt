@@ -18,7 +18,7 @@
 		<example>#("<")#img src="<rg:gravatar email="bob@bob.com" />" width="80" height="80" alt="Gravatar"></example>
 		
 		<h2>Example 02: Simple image tag</h2>
-		<example><rg:gravatar email="bob@bob.com" image="true" alt="Gravatar image" /></example>
+		<example><rg:gravatar email="bob@bob.com" image="true" attributes="alt|Gravatar image" /></example>
 		
 		<h2>Example 03: Full meal deal</h2>
 		<example><rg:gravatar email="bob@bob.com" image="true" size="50" default="identicon" rating="pg" attributes="alt|Gravatar image, class|fooClass, id|fooId" xhtml="true" /></example>

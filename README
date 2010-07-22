@@ -7,7 +7,7 @@ Example 01: Just the URI
 Note: By using the runtime expression, we trick Caché into thinking that the RULE is _NOT_ being wrapped by an HTML image tag. Ugh!
 		
 Example 02: Simple image tag
-<rg:gravatar email="bob@bob.com" image="true" alt="Gravatar image" />
+<rg:gravatar email="bob@bob.com" image="true" attributes="alt|Gravatar image" />
 		
 Example 03: Full meal deal
 <rg:gravatar email="bob@bob.com" image="true" size="50" default="identicon" rating="pg" attributes="alt|Gravatar image, class|fooClass, id|fooId" xhtml="true" />
