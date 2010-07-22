@@ -18,13 +18,13 @@
 		
 		<h2>Example 01: Just the URI</h2>
 		<p>By using the runtime expression, we trick Cache into thinking that the RULE is <b>NOT</b> being wrapped by an HTML image tag. Ugh!</p>
-		<example>#("<")#img src="<rg:gravatar email="rgmicky@gmail.com" />" width="80" height="80" alt="Gravatar"></example>
+		<example>#("<")#img src="<rg:gravatar email="bob@bob.com" />" width="80" height="80" alt="Gravatar"></example>
 		
 		<h2>Example 02: Simple image tag</h2>
-		<example><rg:gravatar email="rgmicky@gmail.com" image="true" alt="Gravatar image" /></example>
+		<example><rg:gravatar email="bob@bob.com" image="true" alt="Gravatar image" /></example>
 		
 		<h2>Example 03: Full meal deal</h2>
-		<example><rg:gravatar email="rgmicky@gmail.com" image="true" size="50" default="identicon" rating="pg" attributes="alt|Gravatar image, class|fooClass, id|fooId" xhtml="true" /></example>
+		<example><rg:gravatar email="bob@bob.com" image="true" size="50" default="identicon" rating="pg" attributes="alt|Gravatar image, class|fooClass, id|fooId" xhtml="true" /></example>
 		
 		<hr>
 		
