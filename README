@@ -1,0 +1,25 @@
+==========================
+<rg:gravatar ... >
+==========================
+		
+Example 01: Just the URI
+#("<")#img src="<rg:gravatar email="rgmicky@gmail.com" />" width="80" height="80" alt="Gravatar">
+Note: By using the runtime expression, we trick Caché into thinking that the RULE is _NOT_ being wrapped by an HTML image tag. Ugh!
+		
+Example 02: Simple image tag
+<rg:gravatar email="rgmicky@gmail.com" image="true" alt="Gravatar image" />
+		
+Example 03: Full meal deal
+<rg:gravatar email="rgmicky@gmail.com" image="true" size="50" default="identicon" rating="pg" attributes="alt|Gravatar image, class|fooClass, id|fooId" xhtml="true" />
+
+==========================
+Attributes:
+==========================
+
+email: The email address. Required.
+size: Size (in pixels), defaults to 80(px) [ 1 - 512 ] (omit the px).
+default: Default imageset to use [ 404 | mm | identicon | monsterid | wavatar ]. Default is the Gravatar image.
+rating: Maximum rating (inclusive) [ g | pg | r | x ]. Default is 'g'.
+image: 'True' to return a complete IMG tag. Default is just the URI.
+attributes: Delimited attributes to include in the IMG tag. Format: 'attribute|value, ...'.
+xhtml: 'True' to return a valid XHTML IMG tag.
