@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Export generator="Cache" version="22">
-<CSP name="rules/rgGravatarRule.csr" application="/csp/cms/" default="1"><![CDATA[
 <csr:rule name="rgGravatarRule" match="rg:gravatar">
 	
 	<csr:description>
@@ -218,5 +215,4 @@
 		
 	</csr:action>
 	
-</csr:rule>]]></CSP>
-</Export>
+</csr:rule>
