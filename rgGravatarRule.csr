@@ -7,7 +7,7 @@
 		<ul>
 			<li><b>Author:</b> Micky Hulse</li>
 			<li><b>Created:</b> 2010/07/22</li>
-			<li><b>Modified:</b> 2010/07/22</li>
+			<li><b>Modified:</b> 2010/08/11</li>
 			<li><b>About:</b> Generates <a href="http://gravatar.com">Gravatar</a> image.</li>
 		</ul>
 		
@@ -25,7 +25,7 @@
 		
 		<hr>
 		
-		<p>Thanks to <a href="http://snipurl.com/zp50r">Thomas Springer</a> for the kick-butt MD5 logic!</p>
+		<p>Thanks to <a href="http://snipurl.com/zp50r">Thomas Springer</a> and <a href="http://tinyurl.com/37fnlg5">Servit</a> for the kick-butt MD5 logic!</p>
 		<p>Inspired by this page: <a href="http://en.gravatar.com/site/implement/images/php/">PHP Image Requests</a>.
 		<p>Find the latest version of this RULE on <a href="http://github.com/mhulse/rg-gravatar">GitHub</a>.</p>
 		
@@ -119,12 +119,21 @@
 				//----------------------------------
 				
 				set csr("email") = $$$lower($$$trim(csr("email")))
+				
+				; Servit md5 solution:
+				set hash = $system.Encryption.MD5Hash(csr("email")) // 16-byte hash using the MD5 message digest algorithm.
+				set md5 = ##class(%xsd.hexBinary).LogicalToXSD(hash) // Converts the Cache %Binary value to the SOAP base64 encoded value.
+				
+				/*
+				; Thomas md5 solution:
 				set hash = ##class(%SYSTEM.Encryption).MD5Hash(csr("email"))
 				set md5 = ""
 				for i=1:1:$length(hash) {
 					set char = $zhex($ascii(hash, i))
 					set md5 = md5 _ $select($length(char) = 1:"0" _ char, 1:char)
 				}
+				*/
+				
 				set md5 = $$$lower(md5)
 				
 				//----------------------------------
